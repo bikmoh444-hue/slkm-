@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}@media print{header,footer,.no-print{display:none!important;}main{padding-top:0!important;background:#ffffff!important;}}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-secondary":"#ffffff","on-tertiary-fixed-variant":"#773300","on-tertiary":"#ffffff","primary-fixed-dim":"#99cbff","secondary-fixed-dim":"#a2c9ff","surface":"#f9f9ff","surface-container-high":"#dfe8fd","on-primary-container":"#f9faff","surface-container-lowest":"#ffffff","secondary-container":"#8ebeff","outline-variant":"#c0c7d2","inverse-surface":"#283140","surface-container":"#e7eeff","on-background":"#131c2a","error":"#ba1a1a","error-container":"#ffdad6","on-error-container":"#93000a","on-primary":"#ffffff","surface-container-highest":"#dae3f7","outline":"#707882","on-tertiary-container":"#fff9f7","primary-fixed":"#cfe5ff","on-primary-fixed":"#001d34","tertiary-fixed":"#ffdbca","surface-container-low":"#f0f3ff","surface-tint":"#00629e","surface-bright":"#f9f9ff","tertiary":"#964200","inverse-primary":"#99cbff","on-secondary-container":"#0c4c86","on-secondary-fixed":"#001c38","tertiary-fixed-dim":"#ffb68e","surface-variant":"#dae3f7","surface-dim":"#d1daee","on-error":"#ffffff","inverse-on-surface":"#ecf1ff","background":"#f9f9ff","on-surface":"#131c2a","tertiary-container":"#bd5400","on-secondary-fixed-variant":"#014881","on-primary-fixed-variant":"#004a78","on-tertiary-fixed":"#331200","on-surface-variant":"#404751","secondary-fixed":"#d3e4ff","primary-container":"#0878be","primary":"#005f98","secondary":"#2a609a"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-sm":"0.5rem","space-lg":"1.5rem","space-xl":"2.5rem","space-md":"1rem","gutter":"1.5rem","margin":"2rem","gutter-mobile":"1rem","margin-mobile":"1rem","space-xs":"0.25rem"},"fontFamily":{"display-lg-mobile":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"]},"fontSize":{"display-lg-mobile":["30px",{"lineHeight":"38px","fontWeight":"800"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"16px","fontWeight":"700"}],"body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],"label-lg":["15px",{"lineHeight":"20px","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"700"}],"label-md":["13px",{"lineHeight":"18px","fontWeight":"600"}],"display-lg":["40px",{"lineHeight":"48px","fontWeight":"800"}],"body-sm":["14px",{"lineHeight":"20px","fontWeight":"400"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","fontWeight":"700"}],"headline-lg":["32px",{"lineHeight":"40px","fontWeight":"700"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] no-print"><div class="h-16 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-4"><div class="flex items-center gap-3"><div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-on-primary font-headline-sm text-headline-sm font-bold tracking-wider">S</div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-bold">SLKM TRANSPORT</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Portail Billetterie &amp; Fret</span></div></div><nav class="hidden md:flex items-center gap-1 bg-surface-container-low p-1 rounded-xl" data-active-classes="bg-primary-container text-on-primary-container font-label-lg text-label-lg rounded-lg shadow-sm"><a aria-current="page" class="px-4 py-2 transition-colors bg-primary-container text-on-primary-container font-label-lg text-label-lg rounded-lg shadow-sm" data-path="ticket-viewer" href="#">Billet Électronique</a><a class="px-4 py-2 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="my-bookings" href="#">Mes Réservations</a><a class="px-4 py-2 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="freight-waybill" href="#">Bordereau Colis</a><a class="px-4 py-2 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="station-network" href="#">Réseau Gares</a></nav><div class="flex items-center gap-3"><div class="hidden sm:flex items-center bg-surface-container-low px-3 py-1.5 rounded-lg text-on-surface-variant font-label-md text-label-md"><span class="material-symbols-outlined text-sm mr-1.5 text-primary">verified_user</span>Agence Agréée</div><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-fixed" src="https://lh3.googleusercontent.com/aida/AEtjO1V5fIi4_BhGW4-Q9e_5HyDuMM2k0UHGdb3zcQ4ZMD7AMs8d1g5iZYeUzHewJUz3I_k9QXjYqufd1gMgwdf8dPcahcbK7Cb0ITLPDxGqgGJJqLl6VoWDkM_W5XUS1XO4tm9SEMtpwS4L4aGGPjkJelzAPuPJqnII5LPcW1-ILBSxLx34aI-eBpf-5e4ONfqWKGdi-2S5an0ukYmscn6nWOJsAT-Mp8GGPOYJKnA_zCxvRYmmH2QbEyWeQpH_yPa7h4aLJcrR7tVH7EY"/></div></div></header><main class="w-full pt-16 bg-surface flex-1"><div class="flex flex-col w-full">
+<!-- Interactive Viewport Controller & Actions Bar -->
+<section class="w-full bg-surface-container-low border-b border-surface-container-highest no-print py-4 px-6 lg:px-12">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+<!-- Left: Status & Identification -->
+<div class="flex items-center gap-3">
+<span class="inline-flex items-center px-3 py-1 rounded-full text-label-md font-label-md bg-emerald-500/10 text-emerald-700">
+<span class="w-2 h-2 rounded-full bg-emerald-600 mr-2 animate-pulse"></span>
+          CONFIRMÉ · PAIEMENT VALIDÉ
+        </span>
+<div class="h-4 w-px bg-outline-variant"></div>
+<span class="font-label-md text-label-md text-on-surface-variant font-mono">DOSSIER #SLKM-2026-001245</span>
+</div>
+<!-- Center: Layout View Switcher -->
+<div class="flex items-center bg-surface-container p-1 rounded-xl shadow-inner">
+<button class="flex items-center gap-2 px-4 py-1.5 rounded-lg font-label-md text-label-md transition-all bg-primary-container text-on-primary-container shadow-sm font-semibold" id="btn-view-a4" onclick="switchView('a4')">
+<span class="material-symbols-outlined text-base">picture_as_pdf</span>
+          A4 Imprimable PDF
+        </button>
+<button class="flex items-center gap-2 px-4 py-1.5 rounded-lg font-label-md text-label-md transition-all text-on-surface-variant hover:text-on-surface" id="btn-view-mobile" onclick="switchView('mobile')">
+<span class="material-symbols-outlined text-base">phone_iphone</span>
+          E-Billet Smartphone
+        </button>
+</div>
+<!-- Right: Print & Export Actions -->
+<div class="flex items-center gap-2.5">
+<button class="flex items-center gap-2 bg-primary text-on-primary px-4 py-2 rounded-lg font-label-lg text-label-lg shadow-sm hover:bg-primary-container hover:text-on-primary-container transition-all active:scale-95" onclick="window.print()">
+<span class="material-symbols-outlined text-base">print</span>
+<span>Imprimer</span>
+</button>
+<button class="flex items-center gap-2 bg-surface-container-highest text-on-surface px-4 py-2 rounded-lg font-label-lg text-label-lg hover:bg-surface-container-high transition-all active:scale-95" onclick="simulateDownload()">
+<span class="material-symbols-outlined text-base">download</span>
+<span class="hidden sm:inline">Télécharger PDF</span>
+</button>
+<button class="flex items-center gap-1.5 bg-surface-container-highest text-on-surface p-2 sm:px-3 sm:py-2 rounded-lg font-label-lg text-label-lg hover:bg-surface-container-high transition-all" onclick="openShareModal()">
+<span class="material-symbols-outlined text-base">share</span>
+<span class="hidden md:inline">Partager</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Document Work Area -->
+<main class="w-full bg-surface-container-high/60 py-6 sm:py-10 px-4 sm:px-6 flex justify-center items-start min-h-[calc(100vh-8rem)]">
+<!-- 1. OFFICIAL A4 PRINTABLE DOCUMENT CONTAINER -->
+<div class="w-full max-w-[850px] bg-white text-neutral-900 shadow-2xl rounded-sm p-8 sm:p-12 relative transition-all duration-300 print:shadow-none print:p-6 print:m-0 print:w-full print:max-w-none print:rounded-none" id="document-a4">
+<!-- A4 Watermark Stamp (Semi-transparent vector) -->
+<div class="absolute inset-0 pointer-events-none flex items-center justify-center opacity-[0.035] select-none overflow-hidden">
+<div class="transform -rotate-45 text-[110px] font-extrabold uppercase tracking-widest text-primary border-8 border-primary px-12 py-6 rounded-3xl">
+          SLKM OFFICIEL
+        </div>
+</div>
+<!-- HEADER BLOCK -->
+<header class="relative z-10 flex flex-col sm:flex-row items-start sm:items-center justify-between pb-6 border-b-2 border-primary/20 gap-6">
+<div class="flex items-center gap-4">
+<div class="w-24 h-20 sm:w-28 sm:h-22 bg-surface-container-low rounded-lg p-1.5 flex items-center justify-center border border-outline-variant/40">
+<img alt="SLKM Transport Logo" class="max-h-full max-w-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwavz078ulqe0xKPq3WHzd231PmxCwCBlLU07Fri16jAfh-Eh5irEuOwDoY0KeWOIYEw3UTaBcdw8HvPy3p9jkiqMbYX-tiJ9gtybn2gzE5V__WF5sxYWMEszKiXHEeVcrAluQjXK0YE5WSxl5FzEXnHI6iNDvY_9caADRL1MEZPq8Ee3NqQ6vl1AmJDCB-GQ57RWjsLqje6UzRdPH_gSbc2gy0cY7Ea1m0dMW4xW6-azN24Zybnb6s1QXu_S5iD2a294"/>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h1 class="font-headline-md text-headline-md text-primary font-bold tracking-tight m-0">SLKM TRANSPORT</h1>
+<span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-800 border border-amber-300">SERVICE VOYAGEURS</span>
+</div>
+<p class="font-body-sm text-body-sm text-neutral-600 font-medium">Société de Transport Routier Interurbain &amp; Messagerie Express</p>
+<p class="text-[11px] text-neutral-500 font-mono mt-0.5">RC 34910 • Patente 2849011 • Agrément Min. Transport N° 4492/TV</p>
+</div>
+</div>
+<div class="flex flex-col items-start sm:items-end text-left sm:text-right">
+<div class="inline-flex items-center px-3 py-1 bg-primary text-white rounded font-label-md text-label-md font-bold tracking-wide uppercase">
+            BILLET DE VOYAGE ÉLECTRONIQUE
+          </div>
+<span class="text-[11px] text-neutral-500 mt-1 uppercase font-semibold">BOARDING PASS · ALLER SIMPLE</span>
+<div class="mt-2 text-right">
+<span class="text-[11px] text-neutral-400 block font-mono">RÉFÉRENCE DOSSIER :</span>
+<span class="font-headline-sm text-headline-sm font-extrabold text-neutral-900 tracking-wider font-mono">SLKM-2026-001245</span>
+</div>
+</div>
+</header>
+<!-- METADATA SUB-BAR -->
+<section class="relative z-10 py-3 px-4 bg-neutral-50 border-b border-neutral-200 flex flex-wrap items-center justify-between gap-3 text-[12px] font-body-sm text-neutral-700">
+<div>
+<span class="text-neutral-500">Date d'émission :</span>
+<strong class="text-neutral-900">20 Octobre 2026 à 14:22</strong>
+</div>
+<div>
+<span class="text-neutral-500">Canal de réservation :</span>
+<strong class="text-neutral-900">Portail Web (slkm.ma) · E-Ticket</strong>
+</div>
+<div>
+<span class="text-neutral-500">Statut :</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded font-bold text-[11px] bg-emerald-100 text-emerald-800">
+            ✓ CONFIRMÉ • PLACE RÉSERVÉE
+          </span>
+</div>
+</section>
+<!-- MAIN ROUTE TIMELINE (VISUAL CENTERPIECE) -->
+<section class="relative z-10 my-6 p-6 rounded-xl bg-gradient-to-r from-blue-50/60 via-white to-blue-50/40 border border-blue-100 shadow-sm">
+<div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-6">
+<!-- Origin Departure Block -->
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-1">
+<span class="w-3 h-3 rounded-full bg-primary ring-4 ring-primary/20"></span>
+<span class="text-label-sm font-label-sm text-primary uppercase font-bold tracking-widest">DÉPART OFFICIEL</span>
+</div>
+<div class="font-headline-lg text-headline-lg font-extrabold text-neutral-900 tracking-tight">GUELMIM</div>
+<p class="font-body-sm text-body-sm font-semibold text-neutral-700 mt-0.5">Gare Routière de Guelmim</p>
+<p class="text-[12px] text-neutral-500">Agence SLKM Principale • Quai N° 03</p>
+<div class="mt-4 pt-3 border-t border-neutral-200/80">
+<div class="text-[11px] text-neutral-500 uppercase font-semibold">Date &amp; Heure de départ</div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md font-bold text-neutral-900">08:30</span>
+<span class="text-label-md font-label-md font-semibold text-neutral-700">Dim. 25 OCT 2026</span>
+</div>
+<div class="text-[12px] font-medium text-amber-700 mt-0.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+                Embarquement dès 08:10 (20 min avant)
+              </div>
+</div>
+</div>
+<!-- Transit Line & Coach Amenities -->
+<div class="flex flex-col items-center justify-center px-4 py-2 border-y md:border-y-0 md:border-x border-neutral-200">
+<span class="text-label-sm font-label-sm text-neutral-500 font-semibold uppercase tracking-wider">Ligne Régulière 214</span>
+<div class="flex items-center gap-3 my-2">
+<div class="w-8 sm:w-16 h-0.5 bg-primary/40 dashed"></div>
+<div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white shadow-md">
+<span class="material-symbols-outlined text-lg">directions_bus</span>
+</div>
+<div class="w-8 sm:w-16 h-0.5 bg-primary/40 dashed"></div>
+</div>
+<span class="text-label-md font-label-md font-bold text-neutral-900">3 H 30 min</span>
+<span class="text-[11px] text-emerald-700 font-medium">Trajet Direct Autoroute</span>
+<!-- Bus Model & Comfort Pills -->
+<div class="flex flex-wrap justify-center gap-1.5 mt-3 max-w-[210px]">
+<span class="px-2 py-0.5 rounded bg-neutral-100 text-[10px] text-neutral-600 font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-primary">wifi</span> Wi-Fi
+              </span>
+<span class="px-2 py-0.5 rounded bg-neutral-100 text-[10px] text-neutral-600 font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-primary">ac_unit</span> Clim 4G
+              </span>
+<span class="px-2 py-0.5 rounded bg-neutral-100 text-[10px] text-neutral-600 font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-primary">power</span> Prises USB
+              </span>
+<span class="px-2 py-0.5 rounded bg-neutral-100 text-[10px] text-neutral-600 font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-primary">airline_seat_recline_extra</span> Grand Confort
+              </span>
+</div>
+</div>
+<!-- Destination Arrival Block -->
+<div class="flex-1 md:text-right">
+<div class="flex items-center md:justify-end gap-2 mb-1">
+<span class="text-label-sm font-label-sm text-neutral-600 uppercase font-bold tracking-widest">ARRIVÉE ESTIMÉE</span>
+<span class="w-3 h-3 rounded-full bg-emerald-600 ring-4 ring-emerald-500/20"></span>
+</div>
+<div class="font-headline-lg text-headline-lg font-extrabold text-neutral-900 tracking-tight">AGADIR</div>
+<p class="font-body-sm text-body-sm font-semibold text-neutral-700 mt-0.5">Gare Routière Al Massira</p>
+<p class="text-[12px] text-neutral-500">Agence Voyageurs Agadir • Débarquement Central</p>
+<div class="mt-4 pt-3 border-t border-neutral-200/80">
+<div class="text-[11px] text-neutral-500 uppercase font-semibold">Date &amp; Heure estimée</div>
+<div class="flex items-baseline md:justify-end gap-2">
+<span class="font-headline-md text-headline-md font-bold text-neutral-900">12:00</span>
+<span class="text-label-md font-label-md font-semibold text-neutral-700">Dim. 25 OCT 2026</span>
+</div>
+<div class="text-[12px] font-medium text-neutral-600 mt-0.5">
+                Correspondances urbaines &amp; taxis disponibles
+              </div>
+</div>
+</div>
+</div>
+</section>
+<!-- PASSENGER, SEAT, AND BAGGAGE TABLE -->
+<section class="relative z-10 my-6">
+<div class="border border-neutral-200 rounded-lg overflow-hidden bg-white shadow-sm">
+<div class="bg-neutral-100 px-4 py-2 border-b border-neutral-200 flex items-center justify-between">
+<span class="text-label-sm font-label-sm uppercase font-bold text-neutral-700 tracking-wider">
+              DÉTAILS DU VOYAGEUR &amp; ATTRIBUTION DU SIÈGE
+            </span>
+<span class="text-[11px] text-neutral-500 font-mono">CAR CATÉGORIE 1 • IMMATRICULATION SLKM-CAR-88</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-neutral-200">
+<!-- Passenger Identity -->
+<div class="p-4 sm:col-span-2">
+<span class="text-[11px] text-neutral-500 uppercase block font-semibold">Nom &amp; Prénom du passager</span>
+<div class="font-headline-sm text-headline-sm font-bold text-neutral-900 mt-0.5">
+                M. MOHAMED AMINE BENJELLOUN
+              </div>
+<div class="mt-2 flex items-center gap-4 text-[12px] text-neutral-600">
+<span><strong>CIN N° :</strong> [À présenter au contrôle]</span>
+<span><strong>Qualité :</strong> 1 Adulte</span>
+</div>
+</div>
+<!-- Seat Designation -->
+<div class="p-4 bg-blue-50/40 flex flex-col justify-center items-start sm:items-center text-left sm:text-center">
+<span class="text-[11px] text-primary uppercase font-bold tracking-wider">SIÈGE ATTRIBUÉ</span>
+<div class="flex items-center gap-2 mt-1">
+<span class="material-symbols-outlined text-primary text-2xl">airline_seat_recline_normal</span>
+<span class="text-3xl font-extrabold text-neutral-900 tracking-tight font-mono">014</span>
+</div>
+<span class="text-[11px] font-semibold text-neutral-600 mt-0.5">Côté Fenêtre • Rangée 4</span>
+</div>
+<!-- Luggage Policy -->
+<div class="p-4 flex flex-col justify-center">
+<span class="text-[11px] text-neutral-500 uppercase font-semibold">Franchise Bagages</span>
+<div class="flex items-center gap-1.5 mt-1 text-[13px] font-bold text-neutral-800">
+<span class="material-symbols-outlined text-base text-primary">luggage</span>
+                1 Soute (max 25 kg)
+              </div>
+<div class="flex items-center gap-1.5 text-[12px] text-neutral-600 mt-0.5">
+<span class="material-symbols-outlined text-base text-neutral-400">backpack</span>
+                1 Bagage à main en cabine
+              </div>
+</div>
+</div>
+</div>
+</section>
+<!-- VERIFICATION QR CODE + PAYMENT SUMMARY DUAL BENTO -->
+<section class="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-6 my-6 items-stretch">
+<!-- Left Bento: Official QR Code Box (Col 5) -->
+<div class="md:col-span-5 border-2 border-dashed border-neutral-300 rounded-xl p-5 flex flex-col items-center justify-between text-center bg-neutral-50/50">
+<div class="w-full text-center">
+<span class="text-label-sm font-label-sm uppercase font-bold text-neutral-700 tracking-wider block">
+              CONTRÔLE EMBARQUEMENT DIRECT
+            </span>
+<span class="text-[11px] text-neutral-500">Présentez ce QR Code au conducteur ou au chef de quai</span>
+</div>
+<!-- Crisp Geometric QR Code Render -->
+<div class="my-4 p-3 bg-white rounded-lg shadow-sm border border-neutral-200">
+<svg class="w-36 h-36 mx-auto" fill="none" viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<!-- Corner Finder 1 -->
+<rect fill="none" height="28" rx="2" stroke="#0f172a" stroke-width="4" width="28" x="5" y="5"></rect>
+<rect fill="#0f172a" height="16" width="16" x="11" y="11"></rect>
+<!-- Corner Finder 2 -->
+<rect fill="none" height="28" rx="2" stroke="#0f172a" stroke-width="4" width="28" x="67" y="5"></rect>
+<rect fill="#0f172a" height="16" width="16" x="73" y="11"></rect>
+<!-- Corner Finder 3 -->
+<rect fill="none" height="28" rx="2" stroke="#0f172a" stroke-width="4" width="28" x="5" y="67"></rect>
+<rect fill="#0f172a" height="16" width="16" x="11" y="73"></rect>
+<!-- QR Data Matrix Sample Pattern -->
+<rect fill="#0f172a" height="6" width="6" x="38" y="8"></rect>
+<rect fill="#0f172a" height="6" width="6" x="48" y="8"></rect>
+<rect fill="#0f172a" height="6" width="6" x="56" y="18"></rect>
+<rect fill="#0f172a" height="6" width="6" x="8" y="38"></rect>
+<rect fill="#0f172a" height="6" width="6" x="18" y="44"></rect>
+<rect fill="#0f172a" height="6" width="6" x="26" y="38"></rect>
+<rect fill="#0878be" height="8" width="8" x="38" y="38"></rect>
+<rect fill="#0f172a" height="6" width="6" x="50" y="38"></rect>
+<rect fill="#0f172a" height="6" width="6" x="60" y="44"></rect>
+<rect fill="#0f172a" height="6" width="6" x="72" y="38"></rect>
+<rect fill="#0f172a" height="8" width="8" x="84" y="44"></rect>
+<rect fill="#0f172a" height="6" width="6" x="38" y="52"></rect>
+<rect fill="#0f172a" height="8" width="8" x="48" y="58"></rect>
+<rect fill="#0f172a" height="6" width="6" x="62" y="52"></rect>
+<rect fill="#0f172a" height="6" width="6" x="78" y="58"></rect>
+<rect fill="#0f172a" height="8" width="8" x="38" y="68"></rect>
+<rect fill="#0f172a" height="6" width="6" x="52" y="72"></rect>
+<rect fill="#0878be" height="6" width="6" x="62" y="68"></rect>
+<rect fill="#0f172a" height="8" width="8" x="72" y="74"></rect>
+<rect fill="#0f172a" height="6" width="6" x="84" y="68"></rect>
+<rect fill="#0f172a" height="6" width="6" x="38" y="84"></rect>
+<rect fill="#0f172a" height="6" width="6" x="50" y="84"></rect>
+<rect fill="#0f172a" height="6" width="6" x="62" y="82"></rect>
+<rect fill="#0f172a" height="6" width="6" x="76" y="86"></rect>
+<!-- Center Logo Indicator -->
+<circle cx="50" cy="50" fill="#f47721" r="7"></circle>
+<text fill="white" font-family="sans-serif" font-size="7" font-weight="bold" text-anchor="middle" x="50" y="53">S</text>
+</svg>
+</div>
+<div class="w-full">
+<span class="text-[11px] font-mono text-neutral-600 block bg-neutral-100 py-1 px-2 rounded">
+              AUTH-TOKEN : SLKM-SEC-84920-GLM-AGA
+            </span>
+<div class="flex items-center justify-center gap-1 text-[11px] text-emerald-700 font-semibold mt-1">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+              Billet certifié infalsifiable • Horodaté CMI
+            </div>
+</div>
+</div>
+<!-- Right Bento: Fare Breakdown & Payment Certification (Col 7) -->
+<div class="md:col-span-7 bg-neutral-50 rounded-xl p-5 border border-neutral-200 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between border-b border-neutral-200 pb-2">
+<span class="text-label-sm font-label-sm uppercase font-bold text-neutral-700 tracking-wider">
+                DÉCOMPTE TARIFAIRE &amp; FACTURATION
+              </span>
+<span class="text-[11px] font-mono text-neutral-500">FACTURE N° F-2026-9042</span>
+</div>
+<!-- Price Breakdown Rows -->
+<div class="mt-3 space-y-2 text-[13px]">
+<div class="flex justify-between items-center text-neutral-600">
+<span>Tarif Billet Voyageur (Guelmim → Agadir)</span>
+<span class="font-mono font-medium text-neutral-900">120,00 DH</span>
+</div>
+<div class="flex justify-between items-center text-neutral-600">
+<span>Assurance Voyageur &amp; Responsabilité Civile</span>
+<span class="font-mono text-emerald-700 font-medium">Inclus (0,00 DH)</span>
+</div>
+<div class="flex justify-between items-center text-neutral-600">
+<span>Frais d'émission électronique &amp; SMS</span>
+<span class="font-mono text-emerald-700 font-medium">Offert (0,00 DH)</span>
+</div>
+<div class="flex justify-between items-center text-neutral-600">
+<span>TVA de Transport Réglementaire (14%)</span>
+<span class="font-mono text-neutral-500 font-medium">Comprise</span>
+</div>
+</div>
+</div>
+<!-- Total Pill Box -->
+<div class="mt-4 pt-3 border-t-2 border-neutral-200">
+<div class="bg-white p-3 rounded-lg border border-neutral-200 flex items-center justify-between shadow-sm">
+<div>
+<span class="text-label-sm font-label-sm uppercase font-bold text-neutral-600 block">TOTAL PAYÉ (TTC)</span>
+<span class="text-[11px] text-neutral-500">Devise officielle marocaine</span>
+</div>
+<div class="text-right">
+<span class="text-2xl sm:text-3xl font-extrabold text-[#F47721] font-mono tracking-tight">120,00</span>
+<span class="text-base font-bold text-neutral-800 ml-1">DH</span>
+</div>
+</div>
+<!-- Payment Confirmation Note -->
+<div class="mt-3 flex items-start gap-2.5 text-[12px] text-neutral-600 bg-emerald-500/5 p-2 rounded border border-emerald-500/20">
+<span class="material-symbols-outlined text-emerald-600 text-lg flex-shrink-0">check_circle</span>
+<div>
+<strong class="text-neutral-900">Paiement Réglé par Carte Bancaire</strong> · Transaction CMI #88294019
+                <div class="text-[11px] text-neutral-500">Autorisation validée le 20/10/2026 à 14:22:04 • Pas de supplément à bord.</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- IMPORTANT BOARDING CONDITIONS & LEGAL REQUIREMENTS -->
+<section class="relative z-10 mt-6 pt-4 border-t border-neutral-200 text-neutral-700">
+<h4 class="text-label-sm font-label-sm uppercase font-bold text-neutral-900 tracking-wider mb-2 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">gavel</span>
+          CONDITIONS GÉNÉRALES &amp; INFORMATIONS OBLIGATOIRES AU VOYAGEUR
+        </h4>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-[11px] text-neutral-600 leading-relaxed">
+<div class="flex items-start gap-1.5">
+<span class="font-bold text-primary">1.</span>
+<span><strong>Pièce d'identité obligatoire :</strong> Tout voyageur doit présenter ce billet avec une pièce d'identité officielle valide (CIN marocaine ou Passeport en cours de validité).</span>
+</div>
+<div class="flex items-start gap-1.5">
+<span class="font-bold text-primary">2.</span>
+<span><strong>Ponctualité au quai :</strong> Présentation recommandée 20 minutes avant le départ. L'accès à l'autocar est formellement clos 5 minutes avant le départ pour respect de l'horaire.</span>
+</div>
+<div class="flex items-start gap-1.5">
+<span class="font-bold text-primary">3.</span>
+<span><strong>Enregistrement bagages soute :</strong> Vos bagages de soute doivent impérativement recevoir une étiquette numérotée remise au guichet ou au chef de soute. Conservez votre talon.</span>
+</div>
+<div class="flex items-start gap-1.5">
+<span class="font-bold text-primary">4.</span>
+<span><strong>Modifications &amp; Annulations :</strong> Échangeable ou remboursable sous déduction de retenues légales au moins 6 heures avant le départ dans nos agences ou sur slkm.ma.</span>
+</div>
+</div>
+</section>
+<!-- TICKET FOOTER: BARCODE & CONTACT LINE -->
+<footer class="relative z-10 mt-6 pt-4 border-t-2 border-neutral-200 flex flex-col gap-3">
+<!-- Barcode Representation -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex flex-col items-start">
+<!-- Simulated Code 128 High Resolution Barcode -->
+<div class="h-9 w-64 bg-repeat-x flex items-stretch gap-[2px]">
+<div class="w-1 bg-neutral-900"></div><div class="w-0.5 bg-neutral-900"></div><div class="w-2 bg-neutral-900"></div><div class="w-0.5 bg-neutral-900"></div>
+<div class="w-1.5 bg-neutral-900"></div><div class="w-1 bg-neutral-900"></div><div class="w-0.5 bg-neutral-900"></div><div class="w-2.5 bg-neutral-900"></div>
+<div class="w-1 bg-neutral-900"></div><div class="w-0.5 bg-neutral-900"></div><div class="w-2 bg-neutral-900"></div><div class="w-1.5 bg-neutral-900"></div>
+<div class="w-0.5 bg-neutral-900"></div><div class="w-1 bg-neutral-900"></div><div class="w-2.5 bg-neutral-900"></div><div class="w-0.5 bg-neutral-900"></div>
+<div class="w-1.5 bg-neutral-900"></div><div class="w-2 bg-neutral-900"></div><div class="w-0.5 bg-neutral-900"></div><div class="w-1 bg-neutral-900"></div>
+<div class="w-2 bg-neutral-900"></div><div class="w-0.5 bg-neutral-900"></div><div class="w-1.5 bg-neutral-900"></div><div class="w-1 bg-neutral-900"></div>
+<div class="w-2.5 bg-neutral-900"></div><div class="w-0.5 bg-neutral-900"></div><div class="w-1 bg-neutral-900"></div><div class="w-2 bg-neutral-900"></div>
+<div class="w-1.5 bg-neutral-900"></div><div class="w-0.5 bg-neutral-900"></div><div class="w-2 bg-neutral-900"></div><div class="w-1 bg-neutral-900"></div>
+</div>
+<span class="text-[10px] font-mono tracking-widest text-neutral-600 mt-1">*SLKM-2026-001245-GLM-AGA-014*</span>
+</div>
+<div class="text-right text-[11px] text-neutral-500">
+<p class="font-bold text-neutral-800">Merci de voyager avec SLKM Transport · Bon voyage sur nos lignes !</p>
+<p class="mt-0.5">Assistance Voyageurs 7j/7 : <strong>0801 00 22 44</strong> • contact@slkm.ma • 48 agences au Maroc</p>
+</div>
+</div>
+<!-- Elegant Two-tone Brand Strip at the exact bottom of ticket -->
+<div class="h-1.5 w-full flex rounded-full overflow-hidden mt-1">
+<div class="w-2/3 bg-primary"></div>
+<div class="w-1/3 bg-[#F47721]"></div>
+</div>
+</footer>
+</div>
+<!-- 2. MOBILE E-BILLET COMPACT SMARTPHONE VIEW (HIDDEN BY DEFAULT, TOGGLED VIA SWITCHER) -->
+<div class="hidden w-full max-w-[390px] bg-white rounded-3xl shadow-2xl overflow-hidden border border-neutral-200 transition-all duration-300" id="document-mobile">
+<!-- Top Mobile Hero Bar -->
+<div class="bg-primary p-6 text-white text-center relative overflow-hidden">
+<div class="flex items-center justify-between mb-4">
+<div class="w-16 h-10 bg-white/10 rounded p-1 flex items-center justify-center">
+<img alt="SLKM Logo" class="max-h-full max-w-full object-contain filter brightness-0 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwavz078ulqe0xKPq3WHzd231PmxCwCBlLU07Fri16jAfh-Eh5irEuOwDoY0KeWOIYEw3UTaBcdw8HvPy3p9jkiqMbYX-tiJ9gtybn2gzE5V__WF5sxYWMEszKiXHEeVcrAluQjXK0YE5WSxl5FzEXnHI6iNDvY_9caADRL1MEZPq8Ee3NqQ6vl1AmJDCB-GQ57RWjsLqje6UzRdPH_gSbc2gy0cY7Ea1m0dMW4xW6-azN24Zybnb6s1QXu_S5iD2a294"/>
+</div>
+<span class="bg-emerald-400 text-neutral-950 font-bold text-[10px] uppercase px-2 py-0.5 rounded-full">
+            Billet Confirmé
+          </span>
+</div>
+<span class="text-xs text-primary-fixed uppercase tracking-wider block font-medium">Billet Mobile Embarquement</span>
+<h2 class="font-headline-md text-headline-md font-extrabold tracking-tight mt-0.5">GUELMIM → AGADIR</h2>
+<p class="text-xs text-blue-100 font-mono mt-1">Dossier #SLKM-2026-001245</p>
+</div>
+<!-- Scalloped Notch Separator -->
+<div class="relative bg-white flex items-center justify-between px-3 -my-3 z-20">
+<div class="w-6 h-6 rounded-full bg-surface-container-high/60 -ml-6 shadow-inner"></div>
+<div class="flex-1 border-b-2 border-dashed border-neutral-200 mx-2"></div>
+<div class="w-6 h-6 rounded-full bg-surface-container-high/60 -mr-6 shadow-inner"></div>
+</div>
+<!-- Mobile Body Content -->
+<div class="p-6 space-y-5 bg-white">
+<!-- Big QR in Smartphone View -->
+<div class="flex flex-col items-center justify-center bg-neutral-50 p-4 rounded-2xl border border-neutral-200">
+<svg class="w-44 h-44" fill="none" viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<rect fill="none" height="28" rx="2" stroke="#0f172a" stroke-width="4" width="28" x="5" y="5"></rect>
+<rect fill="#0f172a" height="16" width="16" x="11" y="11"></rect>
+<rect fill="none" height="28" rx="2" stroke="#0f172a" stroke-width="4" width="28" x="67" y="5"></rect>
+<rect fill="#0f172a" height="16" width="16" x="73" y="11"></rect>
+<rect fill="none" height="28" rx="2" stroke="#0f172a" stroke-width="4" width="28" x="5" y="67"></rect>
+<rect fill="#0f172a" height="16" width="16" x="11" y="73"></rect>
+<rect fill="#0f172a" height="6" width="6" x="38" y="8"></rect>
+<rect fill="#0f172a" height="6" width="6" x="48" y="8"></rect>
+<rect fill="#0f172a" height="6" width="6" x="56" y="18"></rect>
+<rect fill="#0878be" height="8" width="8" x="38" y="38"></rect>
+<rect fill="#0f172a" height="6" width="6" x="50" y="38"></rect>
+<rect fill="#0f172a" height="6" width="6" x="60" y="44"></rect>
+<rect fill="#0f172a" height="6" width="6" x="72" y="38"></rect>
+<rect fill="#0f172a" height="8" width="8" x="38" y="68"></rect>
+<rect fill="#0f172a" height="6" width="6" x="52" y="72"></rect>
+<rect fill="#0878be" height="6" width="6" x="62" y="68"></rect>
+<circle cx="50" cy="50" fill="#f47721" r="7"></circle>
+<text fill="white" font-family="sans-serif" font-size="7" font-weight="bold" text-anchor="middle" x="50" y="53">S</text>
+</svg>
+<span class="text-[11px] font-mono text-neutral-500 mt-2">Prêt pour scan immédiat à la montée</span>
+</div>
+<!-- Essential Boarding Parameters -->
+<div class="grid grid-cols-2 gap-3 bg-neutral-50 p-4 rounded-xl border border-neutral-100 text-center">
+<div class="border-r border-neutral-200 pr-2">
+<span class="text-[10px] text-neutral-500 uppercase font-semibold">Siège Attribué</span>
+<div class="text-2xl font-black text-primary font-mono">N° 014</div>
+<span class="text-[10px] text-neutral-600">Fenêtre • Rang 4</span>
+</div>
+<div class="pl-2">
+<span class="text-[10px] text-neutral-500 uppercase font-semibold">Heure Départ</span>
+<div class="text-2xl font-black text-neutral-900">08:30</div>
+<span class="text-[10px] text-amber-700 font-medium">Quai N° 03</span>
+</div>
+</div>
+<!-- Passenger & Travel Info -->
+<div class="space-y-2 text-sm">
+<div class="flex justify-between py-1 border-b border-neutral-100">
+<span class="text-neutral-500 text-xs">Voyageur</span>
+<span class="font-bold text-neutral-900 text-xs">M. MOHAMED BENJELLOUN</span>
+</div>
+<div class="flex justify-between py-1 border-b border-neutral-100">
+<span class="text-neutral-500 text-xs">Date de départ</span>
+<span class="font-bold text-neutral-900 text-xs">25 Octobre 2026</span>
+</div>
+<div class="flex justify-between py-1 border-b border-neutral-100">
+<span class="text-neutral-500 text-xs">Arrivée estimée</span>
+<span class="font-bold text-neutral-900 text-xs">Agadir • 12:00</span>
+</div>
+<div class="flex justify-between py-1">
+<span class="text-neutral-500 text-xs">Total Réglé</span>
+<span class="font-bold text-[#F47721] font-mono text-sm">120,00 DH (Payé)</span>
+</div>
+</div>
+<!-- Fast Wallet Add Action -->
+<button class="w-full bg-neutral-900 text-white py-3 rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-2 hover:bg-neutral-800 transition">
+<span class="material-symbols-outlined text-base">wallet</span>
+<span>Ajouter à Apple Wallet / Google Pay</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Share / Dispatch Modal (Hidden by Default) -->
+<div class="fixed inset-0 z-50 bg-neutral-900/60 backdrop-blur-sm hidden items-center justify-center p-4" id="share-modal">
+<div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl relative">
+<div class="flex items-center justify-between pb-3 border-b border-neutral-200">
+<h3 class="font-headline-sm text-headline-sm font-bold text-neutral-900">Envoyer le billet</h3>
+<button class="text-neutral-400 hover:text-neutral-700" onclick="closeShareModal()">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-neutral-600 mt-3">
+        Recevez instantanément la version PDF haute définition ainsi que le code QR d'embarquement par SMS ou E-mail.
+      </p>
+<div class="mt-4 space-y-3">
+<div>
+<label class="block text-label-sm font-label-sm uppercase font-bold text-neutral-700 mb-1">Numéro Mobile (Maroc / International)</label>
+<div class="relative">
+<span class="absolute left-3 top-2.5 text-neutral-400 material-symbols-outlined text-sm">smartphone</span>
+<input class="w-full pl-9 pr-3 py-2 border border-neutral-300 rounded-lg text-body-md font-body-md focus:ring-2 focus:ring-primary focus:outline-none" type="tel" value="+212 661 00 00 00"/>
+</div>
+</div>
+<div>
+<label class="block text-label-sm font-label-sm uppercase font-bold text-neutral-700 mb-1">Adresse E-mail</label>
+<div class="relative">
+<span class="absolute left-3 top-2.5 text-neutral-400 material-symbols-outlined text-sm">mail</span>
+<input class="w-full pl-9 pr-3 py-2 border border-neutral-300 rounded-lg text-body-md font-body-md focus:ring-2 focus:ring-primary focus:outline-none" type="email" value="m.benjelloun@example.ma"/>
+</div>
+</div>
+</div>
+<div class="mt-6 flex items-center justify-end gap-2">
+<button class="px-4 py-2 rounded-lg font-label-lg text-label-lg text-neutral-600 hover:bg-neutral-100 transition" onclick="closeShareModal()">
+          Annuler
+        </button>
+<button class="px-5 py-2 rounded-lg font-label-lg text-label-lg bg-primary text-white hover:bg-primary-container transition shadow-sm" onclick="confirmSendShare()">
+          Transmettre le billet
+        </button>
+</div>
+</div>
+</div>
+<!-- Notification Toast Container -->
+<div class="fixed bottom-6 right-6 z-50 bg-neutral-900 text-white px-5 py-3 rounded-xl shadow-xl flex items-center gap-3 transition-opacity duration-300 opacity-0 pointer-events-none" id="toast">
+<span class="material-symbols-outlined text-emerald-400" id="toast-icon">check_circle</span>
+<span class="font-body-sm text-body-sm" id="toast-msg">Opération effectuée</span>
+</div>
+<!-- View Switcher & Micro-interactions Logic -->
+<script>
+    function switchView(view) {
+      const a4Doc = document.getElementById('document-a4');
+      const mobileDoc = document.getElementById('document-mobile');
+      const btnA4 = document.getElementById('btn-view-a4');
+      const btnMobile = document.getElementById('btn-view-mobile');
+
+      if (view === 'a4') {
+        a4Doc.classList.remove('hidden');
+        mobileDoc.classList.add('hidden');
+        btnA4.className = 'flex items-center gap-2 px-4 py-1.5 rounded-lg font-label-md text-label-md transition-all bg-primary-container text-on-primary-container shadow-sm font-semibold';
+        btnMobile.className = 'flex items-center gap-2 px-4 py-1.5 rounded-lg font-label-md text-label-md transition-all text-on-surface-variant hover:text-on-surface';
+      } else {
+        a4Doc.classList.add('hidden');
+        mobileDoc.classList.remove('hidden');
+        btnMobile.className = 'flex items-center gap-2 px-4 py-1.5 rounded-lg font-label-md text-label-md transition-all bg-primary-container text-on-primary-container shadow-sm font-semibold';
+        btnA4.className = 'flex items-center gap-2 px-4 py-1.5 rounded-lg font-label-md text-label-md transition-all text-on-surface-variant hover:text-on-surface';
+      }
+    }
+
+    function openShareModal() {
+      const modal = document.getElementById('share-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeShareModal() {
+      const modal = document.getElementById('share-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function showToast(message, icon = 'check_circle') {
+      const toast = document.getElementById('toast');
+      const msgElem = document.getElementById('toast-msg');
+      const iconElem = document.getElementById('toast-icon');
+      msgElem.textContent = message;
+      iconElem.textContent = icon;
+      toast.classList.remove('opacity-0', 'pointer-events-none');
+      toast.classList.add('opacity-100');
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'pointer-events-none');
+        toast.classList.remove('opacity-100');
+      }, 3500);
+    }
+
+    function simulateDownload() {
+      showToast('Génération du PDF officiel en cours (Format A4 standard)...', 'downloading');
+      setTimeout(() => {
+        showToast('Billet SLKM-2026-001245 téléchargé avec succès !', 'verified');
+      }, 1500);
+    }
+
+    function confirmSendShare() {
+      closeShareModal();
+      showToast('Billet électronique envoyé par SMS et E-mail avec succès !', 'forward_to_inbox');
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-low py-8 no-print"><div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-4 text-on-surface-variant font-body-sm text-body-sm"><div>© 2025 SLKM Transport Express &amp; Messagerie Interurbaine. Tous droits réservés.</div><div class="flex items-center gap-6"><span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base text-primary">print</span>Format A4 Standard Homologué</span><span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base text-tertiary-container">support_agent</span>Centre d'Assistance 24/7</span></div></div></footer></body></html>

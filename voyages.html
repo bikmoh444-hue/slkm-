@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script src="assets/js/tailwind.config.js"></script><link rel="stylesheet" href="assets/css/styles.css"/></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-xs"><button aria-label="Menu Principal" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface active:bg-surface-container transition-colors"><span class="material-symbols-outlined text-2xl">menu</span></button><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-primary">SLKM</span><span class="font-label-sm text-label-sm text-tertiary-container bg-tertiary-fixed/40 px-1.5 py-0.5 rounded uppercase font-semibold">Transport</span></div></div><div class="flex items-center gap-space-xs"><div class="flex items-center bg-surface-container-high rounded-full p-0.5 text-on-surface-variant font-label-sm text-label-sm"><button class="px-2 py-1 rounded-full bg-surface-container-lowest text-primary font-bold shadow-sm">FR</button><button class="px-2 py-1 rounded-full hover:text-on-surface">ع</button><button class="px-2 py-1 rounded-full hover:text-on-surface">EN</button></div><a aria-label="Mes réservations" class="w-11 h-11 flex items-center justify-center rounded-full text-secondary hover:bg-surface-container-low transition-colors" data-path="mes-reservations" href="confirmation.html"><span class="material-symbols-outlined text-2xl">confirmation_number</span></a><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-fixed" src="assets/img/profile.png"/></div></div></header><main class="flex flex-col relative w-full pt-16 pb-28 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Search Summary & Context Module -->
+<section class="px-gutter-mobile pt-space-md pb-space-sm">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="font-headline-sm text-headline-sm font-bold truncate">Casablanca</span>
+<span class="material-symbols-outlined text-tertiary-container text-xl shrink-0">arrow_forward</span>
+<span class="font-headline-sm text-headline-sm font-bold truncate">Agadir</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm mt-0.5">
+<span class="material-symbols-outlined text-base text-primary">calendar_today</span>
+<span>Mer. 24 Oct. 2024</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="material-symbols-outlined text-base text-primary">person</span>
+<span>1 Voyageur</span>
+</div>
+</div>
+<button aria-label="Modifier la recherche" class="flex items-center gap-1 bg-surface-container text-primary hover:bg-surface-container-high px-3 py-2 rounded-lg font-label-md text-label-md transition-all active:scale-95 shrink-0" id="toggle-search-btn">
+<span class="material-symbols-outlined text-lg">edit</span>
+<span>Modifier</span>
+</button>
+</div>
+<!-- Quick Route Highlights -->
+<div class="flex items-center justify-between bg-surface-container-low px-3 py-2 rounded-lg">
+<div class="flex items-center gap-1.5 text-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-lg">verified_user</span>
+<span>Garantie Ponctualité SLKM</span>
+</div>
+<span class="font-label-sm text-label-sm bg-tertiary-fixed text-on-tertiary-fixed px-2 py-0.5 rounded-full font-bold">12 départs / jour</span>
+</div>
+</div>
+</section>
+<!-- Visual Hero Banner (SLKM Fleet & Travel Mood) -->
+<section class="px-gutter-mobile py-space-xs">
+<div class="relative w-full h-32 rounded-xl overflow-hidden shadow-sm flex items-end p-3.5">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="A modern, sleek white and dynamic royal blue intercity passenger coach traveling smoothly on a modern Moroccan coastal highway between Casablanca and Agadir at sunrise, warm saffron sunlight gleaming on the panoramic glass and aerodynamic bus body, high-end travel photography, hyper-clear, vibrant sky." src="assets/img/voyages-coach.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/85 via-on-surface/30 to-transparent"></div>
+<div class="relative z-10 flex items-center justify-between w-full text-surface-bright">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed">Ligne Express Atlantique</span>
+<span class="font-headline-sm text-headline-sm font-bold text-surface">Trajet direct • Autoroute A3</span>
+</div>
+<div class="bg-surface-container-lowest/20 backdrop-blur-md px-2.5 py-1 rounded-full flex items-center gap-1 text-surface-bright font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-base text-tertiary-fixed">eco</span>
+<span>Flotte Euro 6</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Horizontal Dynamic Date Matrix -->
+<section class="pt-space-xs pb-space-sm">
+<div class="px-gutter-mobile mb-1.5 flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-on-surface">Meilleurs tarifs par date</span>
+<span class="font-label-sm text-label-sm text-tertiary-container font-semibold">Semaine 43</span>
+</div>
+<div class="flex items-center gap-2.5 overflow-x-auto px-gutter-mobile no-scrollbar py-1">
+<!-- Date Card: Yesterday -->
+<button class="flex flex-col items-center min-w-[82px] py-2 px-2 rounded-xl bg-surface-container-lowest text-on-surface shadow-sm active:scale-95 transition-all text-left">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Mar. 23</span>
+<span class="font-headline-sm text-headline-sm font-bold my-0.5 text-on-surface">23</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">140 DH</span>
+</button>
+<!-- Date Card: Selected Day -->
+<button class="flex flex-col items-center min-w-[92px] py-2 px-2.5 rounded-xl bg-primary text-on-primary shadow-md relative scale-105 transition-all">
+<div class="absolute -top-2 bg-tertiary-container text-on-tertiary text-[10px] font-extrabold px-1.5 py-0.2 rounded-full uppercase tracking-tight shadow-sm">
+          Choisi
+        </div>
+<span class="font-label-sm text-label-sm text-primary-fixed mt-1">Mer. 24</span>
+<span class="font-headline-sm text-headline-sm font-extrabold my-0.5 text-on-primary">24 Oct</span>
+<span class="font-label-md text-label-md font-extrabold text-tertiary-fixed">150 DH</span>
+</button>
+<!-- Date Card: Tomorrow -->
+<button class="flex flex-col items-center min-w-[82px] py-2 px-2 rounded-xl bg-surface-container-lowest text-on-surface shadow-sm active:scale-95 transition-all text-left">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Jeu. 25</span>
+<span class="font-headline-sm text-headline-sm font-bold my-0.5 text-on-surface">25</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">145 DH</span>
+</button>
+<!-- Date Card: Friday -->
+<button class="flex flex-col items-center min-w-[82px] py-2 px-2 rounded-xl bg-surface-container-lowest text-on-surface shadow-sm active:scale-95 transition-all text-left">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Ven. 26</span>
+<span class="font-headline-sm text-headline-sm font-bold my-0.5 text-on-surface">26</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">160 DH</span>
+</button>
+<!-- Date Card: Saturday -->
+<button class="flex flex-col items-center min-w-[82px] py-2 px-2 rounded-xl bg-surface-container-lowest text-on-surface shadow-sm active:scale-95 transition-all text-left">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sam. 27</span>
+<span class="font-headline-sm text-headline-sm font-bold my-0.5 text-on-surface">27</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">155 DH</span>
+</button>
+</div>
+</section>
+<!-- Interactive Filter Pills Carousel -->
+<section class="py-space-xs">
+<div class="flex items-center gap-2 overflow-x-auto px-gutter-mobile no-scrollbar">
+<button class="flex items-center gap-1.5 bg-primary text-on-primary px-3 py-1.5 rounded-full font-label-md text-label-md font-semibold shrink-0 shadow-sm active:scale-95 transition-all">
+<span class="material-symbols-outlined text-base">tune</span>
+<span>Tous les filtres (3)</span>
+</button>
+<button class="flex items-center gap-1 bg-surface-container-lowest text-on-surface hover:bg-surface-container px-3 py-1.5 rounded-full font-label-md text-label-md font-semibold shrink-0 shadow-sm active:scale-95 transition-all">
+<span>Heure de départ</span>
+<span class="material-symbols-outlined text-base text-outline">expand_more</span>
+</button>
+<button class="flex items-center gap-1 bg-surface-container-lowest text-on-surface hover:bg-surface-container px-3 py-1.5 rounded-full font-label-md text-label-md font-semibold shrink-0 shadow-sm active:scale-95 transition-all">
+<span>Prix</span>
+<span class="material-symbols-outlined text-base text-outline">expand_more</span>
+</button>
+<button class="flex items-center gap-1 bg-surface-container-lowest text-on-surface hover:bg-surface-container px-3 py-1.5 rounded-full font-label-md text-label-md font-semibold shrink-0 shadow-sm active:scale-95 transition-all">
+<span>Places disponibles</span>
+<span class="material-symbols-outlined text-base text-outline">expand_more</span>
+</button>
+<button class="flex items-center gap-1 bg-surface-container-lowest text-on-surface hover:bg-surface-container px-3 py-1.5 rounded-full font-label-md text-label-md font-semibold shrink-0 shadow-sm active:scale-95 transition-all">
+<span>Classe Confort</span>
+<span class="material-symbols-outlined text-base text-outline">expand_more</span>
+</button>
+</div>
+</section>
+<!-- Itinerary Results Stream -->
+<section class="px-gutter-mobile pt-space-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Nos prochains départs</span>
+<span class="font-label-md text-label-md text-on-surface-variant">(3 disponibles)</span>
+</div>
+<button class="flex items-center gap-1 font-label-sm text-label-sm text-primary font-bold">
+<span>Départ le plus tôt</span>
+<span class="material-symbols-outlined text-sm">swap_vert</span>
+</button>
+</div>
+<!-- JOURNEY CARD 1 (RECOMMENDED / CONFORT PLUS) -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden transition-all duration-200 hover:shadow-md flex flex-col gap-space-md">
+<!-- Top Badges Ribbon -->
+<div class="flex items-center justify-between gap-2">
+<div class="flex items-center gap-1.5">
+<span class="bg-primary text-on-primary font-label-sm text-label-sm px-2.5 py-0.5 rounded-full font-bold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-xs">thumb_up</span>
+            Recommandé
+          </span>
+<span class="bg-surface-container text-primary font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">
+            SLKM Confort Plus
+          </span>
+</div>
+<div class="bg-tertiary-fixed/60 text-tertiary font-label-sm text-label-sm font-bold px-2 py-0.5 rounded-md flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-tertiary-container">event_seat</span>
+<span>8 places restantes</span>
+</div>
+</div>
+<!-- Departure to Arrival Timeline -->
+<div class="flex items-center justify-between gap-2 pt-1">
+<!-- Departure Block -->
+<div class="flex flex-col min-w-[70px]">
+<span class="font-headline-lg-mobile text-headline-lg-mobile font-extrabold text-on-surface tracking-tight">07:30</span>
+<span class="font-label-md text-label-md font-bold text-primary">Casablanca</span>
+<span class="font-body-sm text-body-sm text-outline truncate max-w-[100px]">Gare Oulad Ziane</span>
+</div>
+<!-- Transit Track Indicator -->
+<div class="flex-1 flex flex-col items-center px-1">
+<span class="font-label-sm text-label-sm font-bold text-secondary mb-1">6h 15min</span>
+<div class="w-full flex items-center relative py-1">
+<span class="w-2.5 h-2.5 rounded-full bg-primary shrink-0"></span>
+<div class="h-1 flex-1 bg-primary/25 rounded-full mx-1 relative overflow-hidden">
+<div class="absolute inset-y-0 left-0 bg-primary w-2/3 rounded-full"></div>
+</div>
+<span class="material-symbols-outlined text-tertiary-container text-base shrink-0">directions_bus</span>
+<div class="h-1 flex-1 bg-primary/25 rounded-full mx-1"></div>
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container shrink-0"></span>
+</div>
+<span class="font-label-sm text-label-sm text-outline mt-1 text-center font-medium">Direct sans escale</span>
+</div>
+<!-- Arrival Block -->
+<div class="flex flex-col min-w-[70px] text-right">
+<span class="font-headline-lg-mobile text-headline-lg-mobile font-extrabold text-on-surface tracking-tight">13:45</span>
+<span class="font-label-md text-label-md font-bold text-primary">Agadir</span>
+<span class="font-body-sm text-body-sm text-outline truncate max-w-[100px]">Gare Routière</span>
+</div>
+</div>
+<!-- Onboard Amenities Row -->
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1">
+<div class="flex items-center gap-1 bg-surface-container px-2 py-1 rounded-md text-on-surface-variant font-label-sm text-label-sm shrink-0">
+<span class="material-symbols-outlined text-sm text-primary">wifi</span>
+<span>Wi-Fi gratuit</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container px-2 py-1 rounded-md text-on-surface-variant font-label-sm text-label-sm shrink-0">
+<span class="material-symbols-outlined text-sm text-primary">power</span>
+<span>Prise USB</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container px-2 py-1 rounded-md text-on-surface-variant font-label-sm text-label-sm shrink-0">
+<span class="material-symbols-outlined text-sm text-primary">ac_unit</span>
+<span>Climatisation</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container px-2 py-1 rounded-md text-on-surface-variant font-label-sm text-label-sm shrink-0">
+<span class="material-symbols-outlined text-sm text-primary">airline_seat_recline_extra</span>
+<span>Sièges inclinables</span>
+</div>
+</div>
+<!-- Price & CTA Box -->
+<div class="bg-surface-container-low rounded-xl p-3 flex items-center justify-between gap-3">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-outline leading-tight">Par passager</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg-mobile text-headline-lg-mobile font-extrabold text-primary">150</span>
+<span class="font-label-lg text-label-lg font-bold text-primary">DH</span>
+</div>
+</div>
+<button class="flex items-center justify-center gap-2 bg-tertiary-container hover:bg-tertiary text-on-tertiary px-5 py-3 rounded-xl font-label-lg text-label-lg font-bold shadow-[0_4px_14px_rgba(189,84,0,0.30)] active:scale-95 transition-all">
+<span>Choisir ce voyage</span>
+<span class="material-symbols-outlined text-lg">chevron_right</span>
+</button>
+</div>
+</article>
+<!-- JOURNEY CARD 2 (STANDARD / ECONOMIQUE) -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden transition-all duration-200 hover:shadow-md flex flex-col gap-space-md">
+<!-- Top Badges Ribbon -->
+<div class="flex items-center justify-between gap-2">
+<div class="flex items-center gap-1.5">
+<span class="bg-surface-container text-secondary font-label-sm text-label-sm px-2.5 py-0.5 rounded-full font-bold">
+            SLKM Standard
+          </span>
+<span class="bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm px-2 py-0.5 rounded-full font-medium">
+            Économique
+          </span>
+</div>
+<div class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold px-2 py-0.5 rounded-md flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-secondary">event_seat</span>
+<span>14 places restantes</span>
+</div>
+</div>
+<!-- Departure to Arrival Timeline -->
+<div class="flex items-center justify-between gap-2 pt-1">
+<!-- Departure Block -->
+<div class="flex flex-col min-w-[70px]">
+<span class="font-headline-lg-mobile text-headline-lg-mobile font-extrabold text-on-surface tracking-tight">10:00</span>
+<span class="font-label-md text-label-md font-bold text-primary">Casablanca</span>
+<span class="font-body-sm text-body-sm text-outline truncate max-w-[100px]">Gare Oulad Ziane</span>
+</div>
+<!-- Transit Track Indicator -->
+<div class="flex-1 flex flex-col items-center px-1">
+<span class="font-label-sm text-label-sm font-bold text-secondary mb-1">6h 30min</span>
+<div class="w-full flex items-center relative py-1">
+<span class="w-2.5 h-2.5 rounded-full bg-outline-variant shrink-0"></span>
+<div class="h-1 flex-1 bg-surface-container-highest rounded-full mx-1"></div>
+<div class="flex items-center gap-0.5 bg-surface-container px-1 py-0.2 rounded text-[10px] text-on-surface-variant font-bold">
+<span>Marrakech</span>
+</div>
+<div class="h-1 flex-1 bg-surface-container-highest rounded-full mx-1"></div>
+<span class="w-2.5 h-2.5 rounded-full bg-outline-variant shrink-0"></span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary mt-1 text-center font-medium">1 arrêt (Marrakech 15m)</span>
+</div>
+<!-- Arrival Block -->
+<div class="flex flex-col min-w-[70px] text-right">
+<span class="font-headline-lg-mobile text-headline-lg-mobile font-extrabold text-on-surface tracking-tight">16:30</span>
+<span class="font-label-md text-label-md font-bold text-primary">Agadir</span>
+<span class="font-body-sm text-body-sm text-outline truncate max-w-[100px]">Gare Routière</span>
+</div>
+</div>
+<!-- Amenities -->
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1">
+<div class="flex items-center gap-1 bg-surface-container px-2 py-1 rounded-md text-on-surface-variant font-label-sm text-label-sm shrink-0">
+<span class="material-symbols-outlined text-sm text-outline">ac_unit</span>
+<span>Climatisation</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container px-2 py-1 rounded-md text-on-surface-variant font-label-sm text-label-sm shrink-0">
+<span class="material-symbols-outlined text-sm text-outline">luggage</span>
+<span>Bagages 20kg inclus</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container px-2 py-1 rounded-md text-on-surface-variant font-label-sm text-label-sm shrink-0">
+<span class="material-symbols-outlined text-sm text-outline">sanitizer</span>
+<span>Espace désinfecté</span>
+</div>
+</div>
+<!-- Price & CTA Box -->
+<div class="bg-surface-container-low rounded-xl p-3 flex items-center justify-between gap-3">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-outline leading-tight">Par passager</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg-mobile text-headline-lg-mobile font-extrabold text-primary">135</span>
+<span class="font-label-lg text-label-lg font-bold text-primary">DH</span>
+</div>
+</div>
+<button class="flex items-center justify-center gap-2 bg-tertiary-container hover:bg-tertiary text-on-tertiary px-5 py-3 rounded-xl font-label-lg text-label-lg font-bold shadow-[0_4px_14px_rgba(189,84,0,0.30)] active:scale-95 transition-all">
+<span>Choisir ce voyage</span>
+<span class="material-symbols-outlined text-lg">chevron_right</span>
+</button>
+</div>
+</article>
+<!-- JOURNEY CARD 3 (NIGHT EXPRESS / PREMIUM RELAX) -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden transition-all duration-200 hover:shadow-md flex flex-col gap-space-md">
+<!-- Top Badges Ribbon -->
+<div class="flex items-center justify-between gap-2">
+<div class="flex items-center gap-1.5">
+<span class="bg-inverse-surface text-inverse-on-surface font-label-sm text-label-sm px-2.5 py-0.5 rounded-full font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-secondary-container">bedtime</span>
+            Départ de nuit
+          </span>
+<span class="bg-surface-container text-primary font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">
+            SLKM Nuit Étoilée
+          </span>
+</div>
+<div class="bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold px-2 py-0.5 rounded-md flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">airline_seat_flat</span>
+<span>Sièges Grand Confort</span>
+</div>
+</div>
+<!-- Departure to Arrival Timeline -->
+<div class="flex items-center justify-between gap-2 pt-1">
+<!-- Departure Block -->
+<div class="flex flex-col min-w-[70px]">
+<span class="font-headline-lg-mobile text-headline-lg-mobile font-extrabold text-on-surface tracking-tight">23:30</span>
+<span class="font-label-md text-label-md font-bold text-primary">Casablanca</span>
+<span class="font-body-sm text-body-sm text-outline truncate max-w-[100px]">Gare Oulad Ziane</span>
+</div>
+<!-- Transit Track Indicator -->
+<div class="flex-1 flex flex-col items-center px-1">
+<span class="font-label-sm text-label-sm font-bold text-secondary mb-1">6h 30min</span>
+<div class="w-full flex items-center relative py-1">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary shrink-0"></span>
+<div class="h-1 flex-1 bg-secondary/30 rounded-full mx-1"></div>
+<span class="material-symbols-outlined text-primary-container text-base shrink-0">hotel</span>
+<div class="h-1 flex-1 bg-secondary/30 rounded-full mx-1"></div>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary shrink-0"></span>
+</div>
+<span class="font-label-sm text-label-sm text-outline mt-1 text-center font-medium">Direct de nuit</span>
+</div>
+<!-- Arrival Block -->
+<div class="flex flex-col min-w-[70px] text-right">
+<div class="flex items-baseline justify-end gap-1">
+<span class="font-headline-lg-mobile text-headline-lg-mobile font-extrabold text-on-surface tracking-tight">06:00</span>
+<span class="font-label-sm text-label-sm font-bold text-tertiary-container">+1</span>
+</div>
+<span class="font-label-md text-label-md font-bold text-primary">Agadir</span>
+<span class="font-body-sm text-body-sm text-outline truncate max-w-[100px]">Gare Routière</span>
+</div>
+</div>
+<!-- Amenities -->
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1">
+<div class="flex items-center gap-1 bg-surface-container px-2 py-1 rounded-md text-on-surface-variant font-label-sm text-label-sm shrink-0">
+<span class="material-symbols-outlined text-sm text-primary">dark_mode</span>
+<span>Éclairage tamisé</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container px-2 py-1 rounded-md text-on-surface-variant font-label-sm text-label-sm shrink-0">
+<span class="material-symbols-outlined text-sm text-primary">wifi</span>
+<span>Wi-Fi 5G</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container px-2 py-1 rounded-md text-on-surface-variant font-label-sm text-label-sm shrink-0">
+<span class="material-symbols-outlined text-sm text-primary">usb</span>
+<span>Port USB individuel</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container px-2 py-1 rounded-md text-on-surface-variant font-label-sm text-label-sm shrink-0">
+<span class="material-symbols-outlined text-sm text-primary">quiet_time</span>
+<span>Voyage Silence</span>
+</div>
+</div>
+<!-- Price & CTA Box -->
+<div class="bg-surface-container-low rounded-xl p-3 flex items-center justify-between gap-3">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-outline leading-tight">Par passager</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg-mobile text-headline-lg-mobile font-extrabold text-primary">160</span>
+<span class="font-label-lg text-label-lg font-bold text-primary">DH</span>
+</div>
+</div>
+<button class="flex items-center justify-center gap-2 bg-tertiary-container hover:bg-tertiary text-on-tertiary px-5 py-3 rounded-xl font-label-lg text-label-lg font-bold shadow-[0_4px_14px_rgba(189,84,0,0.30)] active:scale-95 transition-all">
+<span>Choisir ce voyage</span>
+<span class="material-symbols-outlined text-lg">chevron_right</span>
+</button>
+</div>
+</article>
+</section>
+<!-- Interactive Search Edit Drawer/Modal Simulated Inline -->
+<div class="hidden px-gutter-mobile pt-space-md" id="search-modal">
+<div class="bg-surface-container-low rounded-2xl p-space-md shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">Modifier votre trajet</span>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface" id="close-modal-btn">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+<div class="grid grid-cols-1 gap-2 pt-2">
+<div class="bg-surface-container-lowest p-2.5 rounded-lg flex items-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-primary">trip_origin</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Départ</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">Casablanca (Toutes gares)</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-2.5 rounded-lg flex items-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-tertiary-container">location_on</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Destination</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">Agadir (Gare Routière)</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<div class="bg-surface-container-lowest p-2.5 rounded-lg flex items-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-primary">today</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Date</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">24 Oct. 2024</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-2.5 rounded-lg flex items-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-primary">group</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Voyageurs</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">1 Passager</span>
+</div>
+</div>
+</div>
+</div>
+<button class="bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg font-bold py-3 rounded-xl mt-2 flex items-center justify-center gap-2 transition-all shadow-sm">
+<span class="material-symbols-outlined">search</span>
+<span>Mettre à jour les départs</span>
+</button>
+</div>
+</div>
+<!-- Reassurance & Trust Elements -->
+<section class="px-gutter-mobile pt-space-lg pb-space-xs">
+<div class="bg-surface-container rounded-xl p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-2xl text-tertiary-container">airplane_ticket</span>
+<span class="font-headline-sm text-headline-sm font-bold">Voyagez en toute sérénité</span>
+</div>
+<div class="grid grid-cols-2 gap-2.5 pt-1">
+<div class="bg-surface-container-lowest p-2.5 rounded-lg flex items-start gap-2 shadow-sm">
+<span class="material-symbols-outlined text-primary text-xl">qr_code_2</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-bold text-on-surface">E-Billet Mobile</span>
+<span class="font-label-sm text-label-sm text-outline">Embarquement immédiat sans imprimer</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-2.5 rounded-lg flex items-start gap-2 shadow-sm">
+<span class="material-symbols-outlined text-primary text-xl">schedule</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-bold text-on-surface">Suivi en direct</span>
+<span class="font-label-sm text-label-sm text-outline">Géolocalisation du car par SMS/App</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Informative Notice Footer Note -->
+<aside class="px-gutter-mobile pt-space-sm pb-space-xs">
+<div class="bg-surface-container-low rounded-lg p-3 flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-xl shrink-0 mt-0.5">info</span>
+<p class="font-body-sm text-body-sm text-outline leading-snug">
+        Horaires et tarifs indicatifs pour démonstration. Réservation garantie avec billet électronique instantané.
+      </p>
+</div>
+</aside>
+<!-- Messagerie Express Quick Hook Banner -->
+<section class="px-gutter-mobile pt-space-xs pb-space-sm">
+<div class="bg-gradient-to-r from-primary to-secondary p-3.5 rounded-xl text-on-primary flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-on-primary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-2xl text-tertiary-fixed">inventory_2</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold">Un colis à expédier sur cette ligne ?</span>
+<span class="font-label-sm text-label-sm text-primary-fixed">SLKM Messagerie livre en moins de 12h</span>
+</div>
+</div>
+<a class="bg-surface-container-lowest text-primary font-label-sm text-label-sm font-bold px-3 py-1.5 rounded-lg shrink-0 shadow-sm active:scale-95 transition-transform" href="#">
+        Tarifs Colis
+      </a>
+</div>
+</section>
+</div>
+<script>
+  (function() {
+    const toggleBtn = document.getElementById('toggle-search-btn');
+    const modal = document.getElementById('search-modal');
+    const closeBtn = document.getElementById('close-modal-btn');
+
+    if (toggleBtn && modal && closeBtn) {
+      toggleBtn.addEventListener('click', () => {
+        modal.classList.toggle('hidden');
+        if (!modal.classList.contains('hidden')) {
+          modal.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      });
+
+      closeBtn.addEventListener('click', () => {
+        modal.classList.add('hidden');
+      });
+    }
+  })();
+</script><footer class="mt-space-xl bg-surface-container-low px-gutter-mobile py-space-lg text-on-surface-variant"><div class="flex flex-col gap-space-md"><div class="flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm font-bold text-primary">SLKM</span><span class="font-body-sm text-body-sm text-outline">| Maroc</span></div><div class="flex items-center gap-1.5 font-label-md text-label-md text-tertiary-container font-semibold"><span class="material-symbols-outlined text-lg">headset_mic</span><span>Assistance 24/7 : 0801 00 22 44</span></div></div><div class="flex flex-wrap gap-x-space-md gap-y-space-xs font-label-md text-label-md"><a class="text-primary hover:underline" data-path="agences" href="agences.html">Réseau d'agences</a><a class="hover:underline" href="#">Conditions Générales</a><a class="hover:underline" href="#">Messagerie Express</a><a class="hover:underline" href="#">Protection Passagers</a></div><p class="font-body-sm text-body-sm text-outline">© 2025 SLKM Transport &amp; Messagerie. Tous droits réservés.</p></div></footer></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(6,74,131,0.08)]" data-active-classes="text-primary font-bold"><div class="flex items-center justify-around h-20 px-space-xs"><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-14 text-on-surface-variant hover:text-primary transition-colors" data-path="accueil" href="index.html"><span class="material-symbols-outlined text-2xl">home</span><span class="font-label-sm text-label-sm">Accueil</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-14 transition-colors text-primary font-bold" data-path="voyages" href="voyages.html"><span class="material-symbols-outlined text-2xl">directions_bus</span><span class="font-label-sm text-label-sm">Voyages</span></a><a class="flex flex-col items-center justify-center -translate-y-3" data-path="rechercher-reserver" href="index.html#booking"><div class="w-14 h-14 rounded-full bg-tertiary-container text-on-tertiary flex items-center justify-center shadow-[0_4px_14px_rgba(189,84,0,0.38)] active:scale-95 transition-transform"><span class="material-symbols-outlined text-3xl">add_card</span></div><span class="font-label-sm text-label-sm text-tertiary-container font-bold mt-1">Réserver</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-14 text-on-surface-variant hover:text-primary transition-colors" data-path="agences" href="agences.html"><span class="material-symbols-outlined text-2xl">storefront</span><span class="font-label-sm text-label-sm">Agences</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-14 text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="index.html#poles"><span class="material-symbols-outlined text-2xl">local_shipping</span><span class="font-label-sm text-label-sm">Services</span></a></div></nav> <script src="assets/js/app.js"></script>
+</body></html>

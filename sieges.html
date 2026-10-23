@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script src="assets/js/tailwind.config.js"></script><link rel="stylesheet" href="assets/css/styles.css"/></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-xs"><button aria-label="Retour" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface active:bg-surface-container transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-2xl">arrow_back</span></button><h1 class="font-headline-sm text-headline-sm font-bold text-on-surface truncate">Choix Du Siege</h1></div><div class="flex items-center gap-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-fixed" src="assets/img/profile.png"/></div></div></header><main class="flex flex-col relative w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full pb-36">
+<!-- Top Journey & Step Summary Card -->
+<div class="px-gutter-mobile pt-space-sm pb-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<!-- Route & Timing Tag -->
+<div class="flex items-center justify-between gap-space-xs mb-space-xs">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container shrink-0"></span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface truncate">Casablanca → Agadir</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm shrink-0">Direct</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm mb-space-sm">
+<span class="material-symbols-outlined text-base text-primary">schedule</span>
+<span class="font-semibold text-on-surface">07:30</span> – <span>13:45</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="text-on-surface-variant">6h 15m</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs bg-surface-container-low rounded-lg px-space-sm py-1.5">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-lg text-primary">directions_bus</span>
+<span class="font-label-md text-label-md text-primary font-bold">SLKM Confort Plus</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant text-xs">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-sm">wifi</span> Wi-Fi</span>
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-sm">ac_unit</span> Clim</span>
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-sm">power</span> 220V</span>
+</div>
+</div>
+<!-- Stepper Indicator -->
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<div class="flex items-center gap-1 text-primary">
+<span class="w-5 h-5 rounded-full bg-primary-fixed flex items-center justify-center font-label-sm text-label-sm font-bold">✓</span>
+<span class="font-label-sm text-label-sm">Trajet</span>
+</div>
+<div class="w-4 h-0.5 bg-tertiary-container rounded"></div>
+<div class="flex items-center gap-1 text-tertiary-container">
+<span class="w-5 h-5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-label-sm text-label-sm font-bold">2</span>
+<span class="font-label-sm text-label-sm font-bold">Sièges</span>
+</div>
+<div class="w-4 h-0.5 bg-surface-container-highest rounded"></div>
+<div class="flex items-center gap-1 text-outline">
+<span class="w-5 h-5 rounded-full bg-surface-container flex items-center justify-center font-label-sm text-label-sm">3</span>
+<span class="font-label-sm text-label-sm">Voyageur</span>
+</div>
+<div class="w-4 h-0.5 bg-surface-container-highest rounded"></div>
+<div class="flex items-center gap-1 text-outline">
+<span class="w-5 h-5 rounded-full bg-surface-container flex items-center justify-center font-label-sm text-label-sm">4</span>
+<span class="font-label-sm text-label-sm">Paiement</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Legend Bar -->
+<div class="px-gutter-mobile pb-space-sm">
+<div class="bg-surface-container-low rounded-xl px-space-md py-space-sm flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-2">
+<span class="w-4 h-4 rounded-md bg-surface-container-lowest shadow-sm flex items-center justify-center text-[10px] text-on-surface">1</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Libre</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-4 h-4 rounded-md bg-tertiary-container shadow-sm flex items-center justify-center text-[10px] text-on-tertiary font-bold">✓</span>
+<span class="font-label-sm text-label-sm font-bold text-tertiary-container">Choisi (2)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-4 h-4 rounded-md bg-surface-dim opacity-70 flex items-center justify-center text-[10px] text-outline">✕</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Occupé</span>
+</div>
+</div>
+</div>
+<!-- Coach Deck Plan (Blueprint Frame) -->
+<div class="px-gutter-mobile flex flex-col items-center">
+<div class="w-full max-w-sm bg-surface-container-lowest rounded-3xl p-space-md shadow-md relative overflow-hidden">
+<!-- Front Cab Header / Driver Zone -->
+<div class="bg-surface-container rounded-2xl p-space-sm mb-space-md flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-full bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-xl">sports_motorsports</span>
+</div>
+<div>
+<p class="font-label-md text-label-md font-bold text-on-surface leading-tight">Poste Conducteur</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Avant du véhicule</p>
+</div>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-bright shadow-sm text-primary">
+<span class="material-symbols-outlined text-base animate-pulse">airline_seat_recline_extra</span>
+<span class="font-label-sm text-label-sm font-bold">Accès Porte</span>
+</div>
+</div>
+<!-- Corridor Labels -->
+<div class="grid grid-cols-5 text-center mb-space-xs px-2 text-outline font-label-sm text-label-sm uppercase tracking-wider">
+<span>Fenêtre</span>
+<span>Couloir</span>
+<span class="text-primary-container font-bold">Allée</span>
+<span>Couloir</span>
+<span>Fenêtre</span>
+</div>
+<!-- Bus Seating Grid (12 Rows x 4 Seats + Center Aisle) -->
+<div class="space-y-2 py-space-xs" id="seatDeck">
+<!-- Row 1 -->
+<div class="grid grid-cols-5 items-center gap-2">
+<button class="h-11 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md font-bold flex flex-col items-center justify-center shadow-sm active:scale-95 transition-transform" data-seat="01">
+<span>01</span>
+</button>
+<button class="h-11 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md font-bold flex flex-col items-center justify-center shadow-sm active:scale-95 transition-transform" data-seat="02">
+<span>02</span>
+</button>
+<div class="flex items-center justify-center text-outline-variant font-label-sm text-label-sm font-bold">R1</div>
+<button class="h-11 rounded-xl bg-surface-dim opacity-60 text-outline font-label-md text-label-md flex flex-col items-center justify-center cursor-not-allowed" disabled="">
+<span>03</span>
+</button>
+<button class="h-11 rounded-xl bg-surface-dim opacity-60 text-outline font-label-md text-label-md flex flex-col items-center justify-center cursor-not-allowed" disabled="">
+<span>04</span>
+</button>
+</div>
+<!-- Row 2 -->
+<div class="grid grid-cols-5 items-center gap-2">
+<button class="h-11 rounded-xl bg-surface-dim opacity-60 text-outline font-label-md text-label-md flex flex-col items-center justify-center cursor-not-allowed" disabled="">
+<span>05</span>
+</button>
+<button class="h-11 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md font-bold flex flex-col items-center justify-center shadow-sm active:scale-95 transition-transform" data-seat="06">
+<span>06</span>
+</button>
+<div class="flex items-center justify-center text-outline-variant font-label-sm text-label-sm font-bold">R2</div>
+<button class="h-11 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md font-bold flex flex-col items-center justify-center shadow-sm active:scale-95 transition-transform" data-seat="07">
+<span>07</span>
+</button>
+<button class="h-11 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md font-bold flex flex-col items-center justify-center shadow-sm active:scale-95 transition-transform" data-seat="08">
+<span>08</span>
+</button>
+</div>
+<!-- Row 3 -->
+<div class="grid grid-cols-5 items-center gap-2">
+<button class="h-11 rounded-xl bg-surface-dim opacity-60 text-outline font-label-md text-label-md flex flex-col items-center justify-center cursor-not-allowed" disabled="">
+<span>09</span>
+</button>
+<button class="h-11 rounded-xl bg-surface-dim opacity-60 text-outline font-label-md text-label-md flex flex-col items-center justify-center cursor-not-allowed" disabled="">
+<span>10</span>
+</button>
+<div class="flex items-center justify-center text-outline-variant font-label-sm text-label-sm font-bold">R3</div>
+<button class="h-11 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md font-bold flex flex-col items-center justify-center shadow-sm active:scale-95 transition-transform" data-seat="11">
+<span>11</span>
+</button>
+<button class="h-11 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md font-bold flex flex-col items-center justify-center shadow-sm active:scale-95 transition-transform" data-seat="12">
+<span>12</span>
+</button>
+</div>
+<!-- Row 4 (Selected seats #14 & #15 in vibrant orange) -->
+<div class="grid grid-cols-5 items-center gap-2">
+<button class="h-11 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md font-bold flex flex-col items-center justify-center shadow-sm active:scale-95 transition-transform" data-seat="13">
+<span>13</span>
+</button>
+<!-- Seat 14 SELECTED -->
+<button class="h-11 rounded-xl bg-tertiary-container text-on-tertiary font-label-md text-label-md font-bold flex flex-col items-center justify-center shadow-md scale-105 active:scale-95 transition-transform relative ring-2 ring-tertiary-container" data-seat="14">
+<span class="text-xs">14</span>
+<span class="material-symbols-outlined text-[13px] leading-none">person</span>
+</button>
+<div class="flex items-center justify-center text-tertiary-container font-label-sm text-label-sm font-extrabold">R4</div>
+<!-- Seat 15 SELECTED -->
+<button class="h-11 rounded-xl bg-tertiary-container text-on-tertiary font-label-md text-label-md font-bold flex flex-col items-center justify-center shadow-md scale-105 active:scale-95 transition-transform relative ring-2 ring-tertiary-container" data-seat="15">
+<span class="text-xs">15</span>
+<span class="material-symbols-outlined text-[13px] leading-none">person</span>
+</button>
+<button class="h-11 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md font-bold flex flex-col items-center justify-center shadow-sm active:scale-95 transition-transform" data-seat="16">
+<span>16</span>
+</button>
+</div>
+<!-- Row 5 -->
+<div class="grid grid-cols-5 items-center gap-2">
+<button class="h-11 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md font-bold flex flex-col items-center justify-center shadow-sm active:scale-95 transition-transform" data-seat="17">
+<span>17</span>
+</button>
+<button class="h-11 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md font-bold flex flex-col items-center justify-center shadow-sm active:scale-95 transition-transform" data-seat="18">
+<span>18</span>
+</button>
+<div class="flex items-center justify-center text-outline-variant font-label-sm text-label-sm font-bold">R5</div>
+<button class="h-11 rounded-xl bg-surface-dim opacity-60 text-outline font-label-md text-label-md flex flex-col items-center justify-center cursor-not-allowed" disabled="">
+<span>19</span>
+</button>
+<button class="h-11 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md font-bold flex flex-col items-center justify-center shadow-sm active:scale-95 transition-transform" data-seat="20">
+<span>20</span>
+</button>
+</div>
+<!-- Row 6 -->
+<div class="grid grid-cols-5 items-center gap-2">
+<button class="h-11 rounded-xl bg-surface-dim opacity-60 text-outline font-label-md text-label-md flex flex-col items-center justify-center cursor-not-allowed" disabled="">
+<span>21</span>
+</button>
+<button class="h-11 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md font-bold flex flex-col items-center justify-center shadow-sm active:scale-95 transition-transform" data-seat="22">
+<span>22</span>
+</button>
+<div class="flex items-center justify-center text-outline-variant font-label-sm text-label-sm font-bold">R6</div>
+<button class="h-11 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md font-bold flex flex-col items-center justify-center shadow-sm active:scale-95 transition-transform" data-seat="23">
+<span>23</span>
+</button>
+<button class="h-11 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md font-bold flex flex-col items-center justify-center shadow-sm active:scale-95 transition-transform" data-seat="24">
+<span>24</span>
+</button>
+</div>
+<!-- Row 7 (Emergency Exit Row) -->
+<div class="grid grid-cols-5 items-center gap-2 py-1">
+<button class="h-11 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md font-bold flex flex-col items-center justify-center shadow-sm active:scale-95 transition-transform" data-seat="25">
+<span>25</span>
+</button>
+<button class="h-11 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md font-bold flex flex-col items-center justify-center shadow-sm active:scale-95 transition-transform" data-seat="26">
+<span>26</span>
+</button>
+<div class="flex items-center justify-center text-error font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-sm">emergency</span>
+</div>
+<button class="h-11 rounded-xl bg-surface-dim opacity-60 text-outline font-label-md text-label-md flex flex-col items-center justify-center cursor-not-allowed" disabled="">
+<span>27</span>
+</button>
+<button class="h-11 rounded-xl bg-surface-dim opacity-60 text-outline font-label-md text-label-md flex flex-col items-center justify-center cursor-not-allowed" disabled="">
+<span>28</span>
+</button>
+</div>
+<!-- Row 8 -->
+<div class="grid grid-cols-5 items-center gap-2">
+<button class="h-11 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md font-bold flex flex-col items-center justify-center shadow-sm active:scale-95 transition-transform" data-seat="29">
+<span>29</span>
+</button>
+<button class="h-11 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md font-bold flex flex-col items-center justify-center shadow-sm active:scale-95 transition-transform" data-seat="30">
+<span>30</span>
+</button>
+<div class="flex items-center justify-center text-outline-variant font-label-sm text-label-sm font-bold">R8</div>
+<button class="h-11 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md font-bold flex flex-col items-center justify-center shadow-sm active:scale-95 transition-transform" data-seat="31">
+<span>31</span>
+</button>
+<button class="h-11 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md font-bold flex flex-col items-center justify-center shadow-sm active:scale-95 transition-transform" data-seat="32">
+<span>32</span>
+</button>
+</div>
+<!-- Row 9 -->
+<div class="grid grid-cols-5 items-center gap-2">
+<button class="h-11 rounded-xl bg-surface-dim opacity-60 text-outline font-label-md text-label-md flex flex-col items-center justify-center cursor-not-allowed" disabled="">
+<span>33</span>
+</button>
+<button class="h-11 rounded-xl bg-surface-dim opacity-60 text-outline font-label-md text-label-md flex flex-col items-center justify-center cursor-not-allowed" disabled="">
+<span>34</span>
+</button>
+<div class="flex items-center justify-center text-outline-variant font-label-sm text-label-sm font-bold">R9</div>
+<button class="h-11 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md font-bold flex flex-col items-center justify-center shadow-sm active:scale-95 transition-transform" data-seat="35">
+<span>35</span>
+</button>
+<button class="h-11 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md font-bold flex flex-col items-center justify-center shadow-sm active:scale-95 transition-transform" data-seat="36">
+<span>36</span>
+</button>
+</div>
+<!-- Row 10 -->
+<div class="grid grid-cols-5 items-center gap-2">
+<button class="h-11 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md font-bold flex flex-col items-center justify-center shadow-sm active:scale-95 transition-transform" data-seat="37">
+<span>37</span>
+</button>
+<button class="h-11 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md font-bold flex flex-col items-center justify-center shadow-sm active:scale-95 transition-transform" data-seat="38">
+<span>38</span>
+</button>
+<div class="flex items-center justify-center text-outline-variant font-label-sm text-label-sm font-bold">R10</div>
+<button class="h-11 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md font-bold flex flex-col items-center justify-center shadow-sm active:scale-95 transition-transform" data-seat="39">
+<span>39</span>
+</button>
+<button class="h-11 rounded-xl bg-surface-dim opacity-60 text-outline font-label-md text-label-md flex flex-col items-center justify-center cursor-not-allowed" disabled="">
+<span>40</span>
+</button>
+</div>
+<!-- Row 11 -->
+<div class="grid grid-cols-5 items-center gap-2">
+<button class="h-11 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md font-bold flex flex-col items-center justify-center shadow-sm active:scale-95 transition-transform" data-seat="41">
+<span>41</span>
+</button>
+<button class="h-11 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md font-bold flex flex-col items-center justify-center shadow-sm active:scale-95 transition-transform" data-seat="42">
+<span>42</span>
+</button>
+<div class="flex items-center justify-center text-outline-variant font-label-sm text-label-sm font-bold">R11</div>
+<button class="h-11 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md font-bold flex flex-col items-center justify-center shadow-sm active:scale-95 transition-transform" data-seat="43">
+<span>43</span>
+</button>
+<button class="h-11 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md font-bold flex flex-col items-center justify-center shadow-sm active:scale-95 transition-transform" data-seat="44">
+<span>44</span>
+</button>
+</div>
+<!-- Row 12 (Last Row 4 Seats + Middle Seat 48) -->
+<div class="grid grid-cols-5 items-center gap-2 pt-1">
+<button class="h-11 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md font-bold flex flex-col items-center justify-center shadow-sm active:scale-95 transition-transform" data-seat="45">
+<span>45</span>
+</button>
+<button class="h-11 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md font-bold flex flex-col items-center justify-center shadow-sm active:scale-95 transition-transform" data-seat="46">
+<span>46</span>
+</button>
+<button class="h-11 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md font-bold flex flex-col items-center justify-center shadow-sm active:scale-95 transition-transform" data-seat="47">
+<span>47</span>
+</button>
+<button class="h-11 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md font-bold flex flex-col items-center justify-center shadow-sm active:scale-95 transition-transform" data-seat="48">
+<span>48</span>
+</button>
+<button class="h-11 rounded-xl bg-surface-dim opacity-60 text-outline font-label-md text-label-md flex flex-col items-center justify-center cursor-not-allowed" disabled="">
+<span>49</span>
+</button>
+</div>
+</div>
+<!-- Bus Rear Tail Indicator -->
+<div class="mt-space-md pt-space-xs border-dashed text-center text-on-surface-variant font-label-sm text-label-sm flex items-center justify-center gap-1.5 py-2 bg-surface-container-low rounded-xl">
+<span class="material-symbols-outlined text-base">directions_bus_filled</span>
+<span>Arrière du car • Moteur &amp; Bagages</span>
+</div>
+</div>
+</div>
+<!-- Sticky Bottom Sheet for Reservation Confirmation -->
+<div class="fixed bottom-0 left-0 right-0 z-40 bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_-8px_30px_rgba(0,0,0,0.12)] px-gutter-mobile pt-space-sm pb-6">
+<div class="max-w-md mx-auto flex flex-col gap-space-xs">
+<!-- Selection Chips & Details -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed font-label-md text-label-md font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">airline_seat_recline_normal</span>
+            N° 14 &amp; 15
+          </span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Couloir / Fenêtre • Rangée 4</span>
+</div>
+<span class="font-headline-sm text-headline-sm font-extrabold text-primary">300 DH</span>
+</div>
+<!-- Breakdown Breakdown Summary -->
+<div class="flex items-center justify-between text-xs text-on-surface-variant px-0.5">
+<span>2 Voyageurs (150 DH × 2)</span>
+<span class="text-tertiary-container font-semibold">Frais de réservation offerts (0 DH)</span>
+</div>
+<!-- Action Button CTA -->
+<button class="w-full h-13 mt-1 py-3 px-space-md rounded-xl bg-tertiary-container text-on-tertiary font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 shadow-lg hover:brightness-105 active:scale-[0.98] transition-all">
+<span>Continuer vers coordonnées</span>
+<span class="material-symbols-outlined text-xl">arrow_forward</span>
+</button>
+</div>
+</div>
+</div></main> <script src="assets/js/app.js"></script>
+</body></html>
